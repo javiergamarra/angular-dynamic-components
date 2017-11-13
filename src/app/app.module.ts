@@ -1,19 +1,13 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {DynamicComponent} from './dynamic/dynamic.component';
 import {AppComponent} from './app.component';
+import {DynamicModule} from './dynamic/dynamic.module';
 
 
 @NgModule({
-  declarations: [
-    DynamicComponent, AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  entryComponents: [DynamicComponent, AppComponent],
-  providers: [],
-  bootstrap: []
+  imports: [BrowserModule, DynamicModule],
+  declarations: [AppComponent],
+  entryComponents: [AppComponent]
 })
 export class AppModule {
   ngDoBootstrap() {

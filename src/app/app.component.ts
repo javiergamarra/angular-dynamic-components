@@ -23,10 +23,12 @@ export class AppComponent implements AfterViewInit {
 
       const factory = this.resolver.resolveComponentFactory(DynamicComponent);
       const componentRef0 = this.viewContainerRef.createComponent(factory);
-      componentRef0.instance.type = this.children.first.nativeElement.id;
+      const first: any = this.children.first;
+      componentRef0.instance.type = first.nativeElement.id;
 
       const componentRef1 = this.viewContainerRef.createComponent(factory);
-      componentRef1.instance.type = this.children.last.nativeElement.id;
+      const last: any = this.children.last;
+      componentRef1.instance.type = last.nativeElement.id;
     }, 1);
   }
 }
